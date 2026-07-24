@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional CV of Nguyen Minh Duc, Full-Stack Developer and AI Enthusiast at Hanoi University.">
+  <meta name="theme-color" content="#edf6f8">
+  <title>Nguyen Minh Duc | Curriculum Vitae</title>
+
+  <style>
+    :root {
+      --ink: #17344a;
+      --ink-soft: #536a7a;
+      --navy: #153d56;
+      --navy-2: #245d79;
+      --navy-3: #2d718c;
+      --paper: #fffefd;
+      --paper-deep: #f1f7f8;
+      --white: #ffffff;
+      --gold: #d78355;
+      --gold-soft: #f5c8ac;
+      --aqua: #31978f;
+      --line: #d8e5e9;
+      --sidebar-bg: #edf6f8;
+      --sidebar-bg-soft: #f7fbfc;
+      --sidebar-ink: #21465d;
+      --sidebar-soft: #516d7c;
+      --serif: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+      --sans: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+      --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 10.2px;
+      line-height: 1.52;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(89, 174, 188, 0.22), transparent 28rem),
+        radial-gradient(circle at 90% 42%, rgba(224, 163, 123, 0.2), transparent 30rem),
+        linear-gradient(145deg, #edf5f7 0%, #f7f3ed 52%, #eef6f7 100%);
+      padding: 48px 20px 64px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.32;
+      background-image:
+        radial-gradient(circle, rgba(49, 151, 143, 0.28) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(215, 131, 85, 0.22) 0 1px, transparent 1.5px);
+      background-position: 0 0, 37px 61px;
+      background-size: 83px 83px, 127px 127px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--gold-soft);
+      outline-offset: 3px;
+    }
+
+    .viewer-bar {
+      position: fixed;
+      right: 22px;
+      bottom: 20px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: viewer-in 0.55s ease both;
+    }
+
+    .viewer-note {
+      display: none;
+      color: rgba(21, 61, 86, 0.72);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .print-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 16px;
+      border: 1px solid rgba(21, 61, 86, 0.22);
+      border-radius: 999px;
+      color: var(--white);
+      font: 700 11px var(--sans);
+      background: linear-gradient(135deg, var(--navy-3), var(--navy));
+      box-shadow: 0 10px 26px rgba(25, 72, 92, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .print-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(25, 72, 92, 0.28);
+    }
+
+    .print-button svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+
+    .resume-stack {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .page {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid rgba(81, 124, 143, 0.15);
+      box-shadow: 0 24px 62px rgba(55, 88, 101, 0.2);
+      isolation: isolate;
+      animation: page-in 0.65s ease both;
+    }
+
+    .page:nth-child(2) {
+      animation-delay: 0.08s;
+    }
+
+    .page::after {
+      content: "";
+      position: absolute;
+      z-index: 5;
+      inset: 4mm;
+      pointer-events: none;
+      border: 0.25mm solid rgba(75, 133, 151, 0.2);
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: 63mm minmax(0, 1fr);
+      height: 100%;
+    }
+
+    .sidebar {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      color: var(--sidebar-ink);
+      border-right: 0.25mm solid #d5e5ea;
+      background:
+        linear-gradient(155deg, rgba(255, 255, 255, 0.85), transparent 34%),
+        linear-gradient(180deg, var(--sidebar-bg-soft), var(--sidebar-bg));
+      padding: 14mm 9mm 11mm;
+    }
+
+    .sidebar::before {
+      content: "";
+      position: absolute;
+      width: 64mm;
+      height: 64mm;
+      top: -38mm;
+      left: -22mm;
+      border: 0.35mm solid rgba(49, 151, 143, 0.2);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 7mm rgba(49, 151, 143, 0.025),
+        0 0 0 14mm rgba(215, 131, 85, 0.02);
+    }
+
+    .sidebar::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.23;
+      pointer-events: none;
+      background:
+        linear-gradient(35deg, transparent 48%, rgba(45, 113, 140, 0.12) 49%, transparent 50%) 0 0 / 18mm 18mm,
+        radial-gradient(circle, rgba(49, 151, 143, 0.34) 0 0.25mm, transparent 0.35mm) 0 0 / 15mm 15mm;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+
+    .sidebar > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .crest {
+      width: 30mm;
+      height: 30mm;
+      margin: 0 auto 5mm;
+      display: block;
+      object-fit: cover;
+      object-position: center 20%;
+      border: 0.45mm solid var(--aqua);
+      border-radius: 50%;
+      box-shadow: 0 0 0 1.4mm var(--sidebar-bg), 0 0 0 1.8mm rgba(49, 151, 143, 0.28);
+    }
+
+    .crest::before,
+    .crest::after {
+      content: "";
+      position: absolute;
+      width: 4mm;
+      height: 4mm;
+      border-color: var(--gold);
+      transform: rotate(45deg);
+    }
+
+    .crest::before {
+      top: -1.2mm;
+      left: 1.8mm;
+      border-top: 0.4mm solid;
+      border-left: 0.4mm solid;
+    }
+
+    .crest::after {
+      right: 1.8mm;
+      bottom: -1.2mm;
+      border-right: 0.4mm solid;
+      border-bottom: 0.4mm solid;
+    }
+
+    .identity-mini {
+      margin-bottom: 8mm;
+      text-align: center;
+    }
+
+    .identity-mini .level {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5mm;
+      margin-bottom: 2mm;
+      padding: 1.2mm 2.8mm;
+      color: var(--navy);
+      border: 0.25mm solid rgba(49, 151, 143, 0.38);
+      border-radius: 99px;
+      font: 700 2.2mm var(--mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .identity-mini .level::before {
+      content: "";
+      width: 1.5mm;
+      height: 1.5mm;
+      border-radius: 50%;
+      background: var(--aqua);
+      box-shadow: 0 0 0 1mm rgba(49, 151, 143, 0.1);
+    }
+
+    .identity-mini p {
+      color: var(--sidebar-soft);
+      font-size: 2.5mm;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .side-section {
+      margin-bottom: 7mm;
+    }
+
+    .side-section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .side-title {
+      display: flex;
+      align-items: center;
+      gap: 2.4mm;
+      margin-bottom: 3.5mm;
+      color: var(--navy-3);
+      font: 700 2.55mm var(--mono);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .side-title::before {
+      content: "";
+      width: 3.5mm;
+      height: 0.35mm;
+      background: var(--gold);
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 3.2mm;
+    }
+
+    .contact-list li {
+      display: block;
+    }
+
+    .contact-list a,
+    .contact-entry {
+      display: grid;
+      grid-template-columns: 5mm minmax(0, 1fr);
+      align-items: start;
+      gap: 2.2mm;
+      color: var(--sidebar-ink);
+      font-size: 2.55mm;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-list a {
+      transition: color 0.18s ease;
+    }
+
+    .contact-list a:hover {
+      color: var(--navy-3);
+    }
+
+    .contact-icon {
+      width: 4mm;
+      height: 4mm;
+      margin-top: 0.15mm;
+      fill: none;
+      stroke: var(--aqua);
+      stroke-width: 1.8;
+    }
+
+    .skill-cluster {
+      margin-bottom: 3.7mm;
+    }
+
+    .skill-cluster:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-label {
+      display: block;
+      margin-bottom: 1.6mm;
+      color: var(--sidebar-ink);
+      font-size: 2.55mm;
+      font-weight: 700;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4mm;
+    }
+
+    .side-tag {
+      padding: 1mm 1.8mm;
+      color: #38566a;
+      border: 0.2mm solid #c9dde4;
+      border-radius: 1.2mm;
+      font-size: 2.15mm;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .language-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 3mm;
+      padding: 2.2mm 0;
+      border-bottom: 0.2mm solid #d5e5ea;
+    }
+
+    .language-row:last-child {
+      border-bottom: 0;
+    }
+
+    .language-name {
+      color: var(--sidebar-ink);
+      font-size: 2.55mm;
+      font-weight: 700;
+    }
+
+    .language-level {
+      color: var(--aqua);
+      font: 600 2.1mm var(--mono);
+      text-align: right;
+    }
+
+    .sidebar-quote {
+      margin-top: auto;
+      padding: 4mm 0 0 4mm;
+      color: var(--sidebar-ink);
+      border-left: 0.45mm solid var(--gold);
+      font: italic 3mm/1.55 var(--serif);
+    }
+
+    .main {
+      position: relative;
+      min-width: 0;
+      padding: 13mm 12mm 11mm;
+      background:
+        linear-gradient(90deg, rgba(49, 151, 143, 0.035), transparent 18mm),
+        var(--paper);
+    }
+
+    .main::before {
+      content: "";
+      position: absolute;
+      width: 46mm;
+      height: 46mm;
+      right: -22mm;
+      top: -24mm;
+      border: 0.25mm solid rgba(49, 151, 143, 0.2);
+      transform: rotate(45deg);
+    }
+
+    .hero {
+      position: relative;
+      margin-bottom: 8mm;
+      padding-bottom: 6mm;
+      border-bottom: 0.35mm solid var(--line);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.35mm;
+      width: 28mm;
+      height: 0.7mm;
+      background: linear-gradient(90deg, var(--gold), var(--aqua));
+    }
+
+    .eyebrow {
+      margin-bottom: 3mm;
+      color: #a6542c;
+      font: 700 2.45mm var(--mono);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .name-heading {
+      max-width: 118mm;
+      color: var(--navy);
+      font: 700 12.8mm/0.92 var(--serif);
+      font-weight: 800;
+      letter-spacing: -0.055em;
+    }
+
+    .name-heading span {
+      display: block;
+      color: var(--navy-3);
+    }
+
+    .hero-role {
+      margin-top: 4mm;
+      color: var(--ink-soft);
+      font-size: 3.8mm;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+    }
+
+    .hero-role strong {
+      color: var(--navy-3);
+      font-weight: 800;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.8mm;
+      margin-top: 3.5mm;
+      padding: 1.4mm 2.5mm;
+      color: #1f5b57;
+      border: 0.25mm solid rgba(91, 196, 189, 0.55);
+      border-radius: 99px;
+      font: 700 2.15mm var(--mono);
+      background: rgba(91, 196, 189, 0.09);
+    }
+
+    .availability::before {
+      content: "";
+      width: 1.7mm;
+      height: 1.7mm;
+      border-radius: 50%;
+      background: #2f9f84;
+      box-shadow: 0 0 0 1mm rgba(47, 159, 132, 0.12);
+    }
+
+    .profile {
+      margin-bottom: 6.5mm;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 3mm;
+      margin-bottom: 3.7mm;
+    }
+
+    .section-heading .index {
+      color: #a6542c;
+      font: 700 2.15mm var(--mono);
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font: 700 4.2mm var(--serif);
+      letter-spacing: 0.01em;
+    }
+
+    .section-heading .rule {
+      height: 0.25mm;
+      background: linear-gradient(90deg, var(--line), transparent);
+    }
+
+    .profile p {
+      color: var(--ink-soft);
+      font-size: 2.9mm;
+      line-height: 1.68;
+    }
+
+    .profile strong {
+      color: var(--ink);
+    }
+
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2mm;
+      margin-top: 4mm;
+    }
+
+    .stat {
+      padding: 2.8mm 2.5mm;
+      border: 0.25mm solid var(--line);
+      border-radius: 2mm;
+      background: rgba(255, 255, 255, 0.48);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 0.5mm;
+      color: var(--navy-3);
+      font: 700 3mm var(--serif);
+    }
+
+    .stat span {
+      color: #6c756f;
+      font: 600 1.9mm var(--mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .content-section {
+      margin-bottom: 6.2mm;
+    }
+
+    .content-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 4.5mm;
+      margin-left: 1.4mm;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 2.3mm;
+      bottom: 2.3mm;
+      left: 1.45mm;
+      width: 0.28mm;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 7mm;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 1.7mm;
+      left: 0;
+      width: 3mm;
+      height: 3mm;
+      border: 0.7mm solid var(--paper);
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 0.3mm var(--gold);
+    }
+
+    .item-topline {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      gap: 4mm;
+      margin-bottom: 0.7mm;
+    }
+
+    .item-topline h3 {
+      color: var(--navy);
+      font-size: 3mm;
+      line-height: 1.35;
+    }
+
+    .date {
+      color: #99502d;
+      font: 700 2mm var(--mono);
+      white-space: nowrap;
+    }
+
+    .item-subtitle {
+      margin-bottom: 1.8mm;
+      color: var(--navy-3);
+      font-size: 2.45mm;
+      font-weight: 700;
+    }
+
+    .bullet-list {
+      padding-left: 3.7mm;
+      color: var(--ink-soft);
+      font-size: 2.45mm;
+    }
+
+    .bullet-list li {
+      margin-bottom: 1mm;
+      padding-left: 0.8mm;
+    }
+
+    .bullet-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .bullet-list li::marker {
+      color: var(--gold);
+    }
+
+    .arsenal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.6mm;
+    }
+
+    .arsenal-card {
+      min-height: 22mm;
+      padding: 3mm;
+      border: 0.25mm solid var(--line);
+      border-radius: 2mm;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(237, 246, 247, 0.72));
+    }
+
+    .arsenal-card h3 {
+      margin-bottom: 1.5mm;
+      color: var(--navy-3);
+      font-size: 2.55mm;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .arsenal-card p {
+      color: var(--ink-soft);
+      font-size: 2.25mm;
+      line-height: 1.55;
+    }
+
+    .page-number {
+      position: absolute;
+      z-index: 7;
+      right: 8mm;
+      bottom: 6.5mm;
+      color: rgba(18, 33, 51, 0.42);
+      font: 700 2.1mm var(--mono);
+      letter-spacing: 0.1em;
+    }
+
+    .page-number.light {
+      color: rgba(240, 215, 140, 0.65);
+    }
+
+    .chapter-mark {
+      margin-bottom: 8mm;
+      padding-bottom: 5mm;
+      border-bottom: 0.35mm solid var(--line);
+    }
+
+    .chapter-mark .kicker {
+      margin-bottom: 1.5mm;
+      color: #a6542c;
+      font: 700 2.35mm var(--mono);
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .chapter-mark h2 {
+      color: var(--navy);
+      font: 700 8.7mm/1 var(--serif);
+    }
+
+    .chapter-mark p {
+      max-width: 102mm;
+      margin-top: 2.5mm;
+      color: var(--ink-soft);
+      font-size: 2.65mm;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 4mm;
+    }
+
+    .project-card {
+      position: relative;
+      padding: 4mm;
+      border: 0.25mm solid var(--line);
+      border-radius: 2.2mm;
+      background: rgba(255, 255, 255, 0.52);
+      break-inside: avoid;
+    }
+
+    .project-card.featured {
+      padding: 4.5mm;
+      border-color: rgba(215, 131, 85, 0.55);
+      background:
+        linear-gradient(120deg, rgba(215, 131, 85, 0.09), transparent 42%),
+        rgba(255, 255, 255, 0.62);
+    }
+
+    .project-card.featured::before {
+      content: "FLAGSHIP";
+      position: absolute;
+      top: -2.6mm;
+      right: 4mm;
+      padding: 0.9mm 2.4mm;
+      color: var(--navy);
+      border-radius: 99px;
+      font: 800 1.75mm var(--mono);
+      letter-spacing: 0.1em;
+      background: var(--gold-soft);
+    }
+
+    .project-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 4mm;
+      margin-bottom: 1.7mm;
+    }
+
+    .project-type {
+      display: block;
+      margin-bottom: 0.7mm;
+      color: #99502d;
+      font: 700 1.95mm var(--mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-head h3 {
+      color: var(--navy);
+      font: 700 3.5mm/1.2 var(--serif);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 1mm;
+      margin-top: 0.8mm;
+      color: var(--navy-3);
+      font: 700 2mm var(--mono);
+      white-space: nowrap;
+    }
+
+    .project-link svg {
+      width: 3.3mm;
+      height: 3.3mm;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+
+    .project-link:hover {
+      color: #99502d;
+    }
+
+    .project-card > p {
+      margin-bottom: 2.3mm;
+      color: var(--ink-soft);
+      font-size: 2.4mm;
+      line-height: 1.58;
+    }
+
+    .project-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4mm 4mm;
+      margin-bottom: 2.5mm;
+      list-style: none;
+    }
+
+    .project-points li {
+      position: relative;
+      padding-left: 3mm;
+      color: #3f4d59;
+      font-size: 2.2mm;
+    }
+
+    .project-points li::before {
+      content: "◆";
+      position: absolute;
+      left: 0;
+      top: 0.25mm;
+      color: var(--aqua);
+      font-size: 1.7mm;
+    }
+
+    .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3mm;
+    }
+
+    .tech {
+      padding: 0.8mm 1.7mm;
+      color: #325b5a;
+      border: 0.2mm solid rgba(91, 196, 189, 0.35);
+      border-radius: 1mm;
+      font: 700 1.8mm var(--mono);
+      background: rgba(91, 196, 189, 0.08);
+    }
+
+    .two-column-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .milestone-list {
+      display: grid;
+      gap: 2.7mm;
+    }
+
+    .milestone {
+      display: grid;
+      grid-template-columns: 7mm minmax(0, 1fr);
+      gap: 2mm;
+    }
+
+    .milestone-number {
+      width: 6mm;
+      height: 6mm;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      border: 0.25mm solid rgba(215, 131, 85, 0.72);
+      border-radius: 50%;
+      font: 800 1.9mm var(--mono);
+      background: rgba(215, 131, 85, 0.1);
+    }
+
+    .milestone h3 {
+      margin-bottom: 0.6mm;
+      color: var(--navy);
+      font-size: 2.45mm;
+    }
+
+    .milestone p {
+      color: var(--ink-soft);
+      font-size: 2.15mm;
+      line-height: 1.48;
+    }
+
+    .education-card {
+      padding: 3.5mm;
+      border-left: 0.65mm solid var(--gold);
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .education-card + .education-card {
+      margin-top: 2.7mm;
+    }
+
+    .education-card .date {
+      display: block;
+      margin-bottom: 0.8mm;
+    }
+
+    .education-card h3 {
+      color: var(--navy);
+      font: 700 2.8mm/1.3 var(--serif);
+    }
+
+    .education-card p {
+      margin-top: 0.6mm;
+      color: var(--ink-soft);
+      font-size: 2.2mm;
+    }
+
+    .education-card .gpa {
+      display: inline-block;
+      margin-top: 1.5mm;
+      padding: 0.7mm 1.6mm;
+      color: #315e59;
+      border-radius: 99px;
+      font: 700 1.85mm var(--mono);
+      background: rgba(91, 196, 189, 0.12);
+    }
+
+    .closing-banner {
+      position: absolute;
+      left: 12mm;
+      right: 12mm;
+      bottom: 11mm;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 5mm;
+      padding: 4mm 5mm;
+      color: var(--ink);
+      border-radius: 2mm;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(49, 151, 143, 0.18), transparent 25mm),
+        linear-gradient(135deg, #eaf5f6, #f8f3ed);
+    }
+
+    .closing-banner strong {
+      display: block;
+      margin-bottom: 0.8mm;
+      color: var(--navy);
+      font: 700 3mm var(--serif);
+    }
+
+    .closing-banner p {
+      font-size: 2.15mm;
+    }
+
+    .closing-banner .seal {
+      width: 15mm;
+      height: 15mm;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      border: 0.35mm solid var(--aqua);
+      border-radius: 50%;
+      font: 800 3.2mm var(--serif);
+    }
+
+    .page-two .main {
+      padding-bottom: 34mm;
+    }
+
+    .compact-side-nav {
+      list-style: none;
+      counter-reset: nav;
+    }
+
+    .compact-side-nav li {
+      counter-increment: nav;
+      display: grid;
+      grid-template-columns: 6mm 1fr;
+      gap: 2mm;
+      padding: 2.4mm 0;
+      color: var(--sidebar-ink);
+      border-bottom: 0.2mm solid #d5e5ea;
+      font-size: 2.5mm;
+      font-weight: 600;
+    }
+
+    .compact-side-nav li::before {
+      content: "0" counter(nav);
+      color: #a6542c;
+      font: 700 1.9mm var(--mono);
+    }
+
+    .principle-list {
+      display: grid;
+      gap: 2.7mm;
+    }
+
+    .principle {
+      padding: 2.7mm;
+      border: 0.2mm solid #cbdfe5;
+      border-radius: 1.5mm;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .principle strong {
+      display: block;
+      margin-bottom: 0.5mm;
+      color: var(--sidebar-ink);
+      font-size: 2.4mm;
+    }
+
+    .principle span {
+      color: var(--sidebar-soft);
+      font-size: 2.1mm;
+    }
+
+    /* ─────────────────────────────────────────────
+       HIGH-CONTRAST MINIMAL REDESIGN
+       Clean, readable and recruiter-focused.
+    ───────────────────────────────────────────── */
+    :root {
+      --ink: #111827;
+      --ink-soft: #374151;
+      --navy: #0f172a;
+      --navy-2: #1e3a5f;
+      --navy-3: #1d4ed8;
+      --paper: #ffffff;
+      --paper-deep: #f8fafc;
+      --gold: #2563eb;
+      --gold-soft: #dbeafe;
+      --aqua: #0f766e;
+      --line: #cbd5e1;
+      --sidebar-bg: #f4f6f8;
+      --sidebar-bg-soft: #fafafa;
+      --sidebar-ink: #111827;
+      --sidebar-soft: #4b5563;
+    }
+
+    body {
+      color: var(--ink);
+      font-size: 11px;
+      background: #e5e7eb;
+    }
+
+    body::before {
+      display: none;
+    }
+
+    .page {
+      border: 0;
+      background: #ffffff;
+      box-shadow: 0 20px 55px rgba(15, 23, 42, 0.18);
+    }
+
+    .page::after {
+      inset: 3.5mm;
+      border-color: #e2e8f0;
+    }
+
+    .page-grid {
+      grid-template-columns: 64mm minmax(0, 1fr);
+    }
+
+    .sidebar {
+      padding: 12mm 6.5mm 10mm;
+      color: var(--sidebar-ink);
+      border-right: 0.35mm solid #dbe2e8;
+      background: linear-gradient(180deg, #fafafa 0%, #f3f5f7 100%);
+    }
+
+    .sidebar::before,
+    .sidebar::after {
+      display: none;
+    }
+
+    .crest {
+      width: 28mm;
+      height: 28mm;
+      margin: 0 0 4mm;
+      border: 0.4mm solid #1d4ed8;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      background: none;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+      display: block;
+    }
+
+    .crest::before,
+    .crest::after {
+      display: none;
+    }
+
+    .identity-mini {
+      margin-bottom: 7mm;
+      text-align: left;
+    }
+
+    .identity-mini .level {
+      display: block;
+      margin-bottom: 1.5mm;
+      padding: 0;
+      color: #111827;
+      border: 0;
+      border-radius: 0;
+      font: 800 2.9mm/1.35 var(--sans);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .identity-mini .level::before {
+      display: none;
+    }
+
+    .identity-mini p {
+      color: #4b5563;
+      font-size: 2.6mm;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .side-section {
+      margin-bottom: 6mm;
+    }
+
+    .side-title {
+      gap: 2mm;
+      margin-bottom: 3mm;
+      color: #1d4ed8;
+      font: 800 2.75mm var(--sans);
+      letter-spacing: 0.09em;
+    }
+
+    .side-title::before {
+      width: 3mm;
+      height: 0.45mm;
+      background: #1d4ed8;
+    }
+
+    .contact-list {
+      gap: 3mm;
+    }
+
+    .contact-list a,
+    .contact-entry {
+      grid-template-columns: 4.2mm minmax(0, 1fr);
+      gap: 2mm;
+      color: #1f2937;
+      font-size: 2.8mm;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .contact-icon {
+      width: 3.7mm;
+      height: 3.7mm;
+      stroke: #1d4ed8;
+      stroke-width: 2;
+    }
+
+    .skill-cluster {
+      margin-bottom: 3.4mm;
+    }
+
+    .skill-label {
+      margin-bottom: 1.4mm;
+      color: #111827;
+      font-size: 2.7mm;
+    }
+
+    .tag-list {
+      gap: 1.2mm;
+    }
+
+    .side-tag {
+      padding: 1mm 1.7mm;
+      color: #1f2937;
+      border-color: #cbd5e1;
+      border-radius: 1.1mm;
+      font-size: 2.45mm;
+      font-weight: 600;
+      background: #ffffff;
+    }
+
+    .language-row {
+      padding: 2mm 0;
+      border-bottom-color: #d8dee5;
+    }
+
+    .language-name {
+      color: #111827;
+      font-size: 2.7mm;
+    }
+
+    .language-level {
+      color: #0f766e;
+      font-size: 2.2mm;
+    }
+
+    .sidebar-quote {
+      display: none;
+    }
+
+    .main {
+      padding: 12mm 11mm 10mm;
+      background: #ffffff;
+    }
+
+    .main::before {
+      display: none;
+    }
+
+    .hero {
+      margin-bottom: 6mm;
+      padding-bottom: 5mm;
+      border-bottom-color: #cbd5e1;
+    }
+
+    .hero::after {
+      width: 24mm;
+      height: 0.8mm;
+      background: #2563eb;
+    }
+
+    .eyebrow {
+      margin-bottom: 2.5mm;
+      color: #1d4ed8;
+      font: 800 2.35mm var(--sans);
+      letter-spacing: 0.13em;
+    }
+
+    .name-heading {
+      color: #0f172a;
+      font-size: 11.5mm;
+      line-height: 0.94;
+      font-weight: 800;
+      letter-spacing: -0.055em;
+    }
+
+    .name-heading span {
+      color: #1d4ed8;
+    }
+
+    .hero-role {
+      margin-top: 3.5mm;
+      color: #374151;
+      font-size: 3.55mm;
+    }
+
+    .hero-role strong {
+      color: #111827;
+    }
+
+    .availability {
+      margin-top: 3mm;
+      padding: 1.2mm 2.3mm;
+      color: #14532d;
+      border-color: #86efac;
+      font-size: 2.1mm;
+      background: #f0fdf4;
+    }
+
+    .profile {
+      margin-bottom: 5mm;
+    }
+
+    .section-heading {
+      gap: 2.5mm;
+      margin-bottom: 3mm;
+    }
+
+    .section-heading .index {
+      color: #1d4ed8;
+      font-size: 2.05mm;
+    }
+
+    .section-heading h2 {
+      color: #111827;
+      font-size: 4.15mm;
+      font-weight: 800;
+    }
+
+    .profile p {
+      color: #374151;
+      font-size: 3.2mm;
+      line-height: 1.6;
+    }
+
+    .stat-strip {
+      display: none;
+    }
+
+    .content-section {
+      margin-bottom: 5.5mm;
+    }
+
+    .timeline {
+      gap: 4.6mm;
+    }
+
+    .timeline-item {
+      padding-left: 6.5mm;
+    }
+
+    .timeline-item::before {
+      border-color: #ffffff;
+      background: #2563eb;
+      box-shadow: 0 0 0 0.3mm #2563eb;
+    }
+
+    .item-topline h3 {
+      color: #111827;
+      font-size: 3.1mm;
+    }
+
+    .date {
+      color: #1d4ed8;
+      font-size: 1.95mm;
+    }
+
+    .item-subtitle {
+      margin-bottom: 1.5mm;
+      color: #1e3a5f;
+      font-size: 2.7mm;
+    }
+
+    .bullet-list {
+      color: #374151;
+      font-size: 2.95mm;
+      line-height: 1.5;
+    }
+
+    .bullet-list li {
+      margin-bottom: 0.8mm;
+    }
+
+    .arsenal-grid {
+      gap: 2.4mm;
+    }
+
+    .arsenal-card {
+      min-height: 23mm;
+      padding: 3.1mm;
+      border-color: #d7dee5;
+      background: #f8fafc;
+    }
+
+    .arsenal-card h3 {
+      color: #1e3a5f;
+      font-size: 2.65mm;
+    }
+
+    .arsenal-card p {
+      color: #374151;
+      font-size: 2.75mm;
+      line-height: 1.48;
+    }
+
+    .page-number {
+      color: #64748b;
+    }
+
+    .chapter-mark {
+      margin-bottom: 6mm;
+      padding-bottom: 4.5mm;
+      border-bottom-color: #cbd5e1;
+    }
+
+    .chapter-mark .kicker {
+      color: #1d4ed8;
+      font: 800 2.25mm var(--sans);
+    }
+
+    .chapter-mark h2 {
+      color: #111827;
+      font-size: 7.6mm;
+      font-weight: 800;
+    }
+
+    .chapter-mark p {
+      margin-top: 2mm;
+      color: #374151;
+      font-size: 2.9mm;
+    }
+
+    .project-list {
+      gap: 3.5mm;
+    }
+
+    .project-card,
+    .project-card.featured {
+      padding: 3.8mm;
+      border-color: #cbd5e1;
+      border-radius: 1.8mm;
+      background: #ffffff;
+    }
+
+    .project-card.featured {
+      border-width: 0.45mm;
+      border-color: #2563eb;
+    }
+
+    .project-card.featured::before {
+      color: #1e3a5f;
+      background: #dbeafe;
+    }
+
+    .project-type {
+      color: #1d4ed8;
+      font-size: 1.9mm;
+    }
+
+    .project-head h3 {
+      color: #111827;
+      font-size: 3.55mm;
+      font-weight: 800;
+    }
+
+    .project-link {
+      color: #1d4ed8;
+      font-size: 1.95mm;
+    }
+
+    .project-card > p {
+      color: #374151;
+      font-size: 3mm;
+      line-height: 1.52;
+    }
+
+    .project-points li {
+      color: #374151;
+      font-size: 2.7mm;
+    }
+
+    .project-points li::before {
+      color: #2563eb;
+    }
+
+    .tech {
+      color: #1e3a5f;
+      border-color: #bfdbfe;
+      background: #eff6ff;
+    }
+
+    .milestone-number {
+      color: #1d4ed8;
+      border-color: #93c5fd;
+      background: #eff6ff;
+    }
+
+    .milestone h3,
+    .education-card h3 {
+      color: #111827;
+      font-size: 2.75mm;
+    }
+
+    .milestone p,
+    .education-card p {
+      color: #374151;
+      font-size: 2.6mm;
+      line-height: 1.5;
+    }
+
+    .education-card {
+      border-left-color: #2563eb;
+      background: #f8fafc;
+    }
+
+    .education-card .gpa {
+      color: #14532d;
+      background: #dcfce7;
+    }
+
+    .compact-side-nav li {
+      color: #1f2937;
+      border-bottom-color: #d8dee5;
+      font-size: 2.75mm;
+    }
+
+    .compact-side-nav li::before {
+      color: #1d4ed8;
+    }
+
+    .closing-banner {
+      grid-template-columns: 1fr;
+      color: #1f2937;
+      border: 0.25mm solid #cbd5e1;
+      background: #f8fafc;
+    }
+
+    .closing-banner strong {
+      color: #111827;
+      font-size: 3.1mm;
+    }
+
+    .closing-banner .seal {
+      color: #1d4ed8;
+      border-color: #2563eb;
+    }
+
+    .closing-banner p {
+      font-size: 2.55mm;
+    }
+
+    @keyframes page-in {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes viewer-in {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 860px) {
+      body {
+        padding: 76px 10px 40px;
+      }
+
+      .viewer-bar {
+        right: 14px;
+        bottom: 14px;
+      }
+
+      .viewer-note {
+        display: none;
+      }
+
+      .resume-stack {
+        align-items: flex-start;
+        width: max-content;
+        transform-origin: top left;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+
+      html,
+      body {
+        width: 210mm;
+        min-width: 210mm;
+        margin: 0;
+        padding: 0;
+        background: var(--white);
+      }
+
+      body::before,
+      .viewer-bar {
+        display: none !important;
+      }
+
+      .resume-stack {
+        display: block;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        break-after: page;
+        box-shadow: none;
+        animation: none;
+      }
+
+      .page:last-child {
+        break-after: auto;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="sr-only">Nguyen Minh Duc — Curriculum Vitae</h1>
+
+  <div class="viewer-bar" aria-label="Document controls">
+    <span class="viewer-note">Curriculum Vitae · 2 pages</span>
+    <button class="print-button" id="printButton" type="button" onclick="window.print()">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/>
+      </svg>
+      Save as PDF
+    </button>
+  </div>
+
+  <main class="resume-stack" aria-label="Curriculum vitae of Nguyen Minh Duc">
+    <article class="page page-one" aria-label="CV page 1 of 2">
+      <div class="page-grid">
+        <aside class="sidebar" aria-label="Contact details and core skills">
+          <img class="crest" src="chan_dung.png" alt="Nguyen Minh Duc Portrait">
+          <div class="identity-mini">
+            <span class="level">Information Technology Student</span>
+            <p>Hanoi University · IT</p>
+          </div>
+
+          <section class="side-section">
+            <h2 class="side-title">Contact</h2>
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:nguyenduc07062005@gmail.com">
+                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
+                  <span>nguyenduc07062005@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+84947875722">
+                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.61 10.39 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-4-1.5-1.5 3c-4.35-1.86-8.14-5.65-10-10l3-1.5z"/></svg>
+                  <span>+84 947 875 722</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/nguyenduc07062005" target="_blank" rel="noreferrer">
+                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-6 0C5.8.1 4.7.5 4.7.5A5 5 0 0 0 4.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 9 18v4"/><path d="M9 19c-3 .9-3-1.5-4.2-2"/></svg>
+                  <span>github.com/nguyenduc07062005</span>
+                </a>
+              </li>
+              <li>
+                <span class="contact-entry">
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <span>Hanoi, Vietnam</span>
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Technical Skills</h2>
+            <div class="skill-cluster">
+              <span class="skill-label">Languages</span>
+              <div class="tag-list">
+                <span class="side-tag">Python</span>
+                <span class="side-tag">JavaScript</span>
+                <span class="side-tag">TypeScript</span>
+                <span class="side-tag">Java</span>
+                <span class="side-tag">SQL</span>
+              </div>
+            </div>
+            <div class="skill-cluster">
+              <span class="skill-label">Web Engineering</span>
+              <div class="tag-list">
+                <span class="side-tag">React</span>
+                <span class="side-tag">Node.js</span>
+                <span class="side-tag">FastAPI</span>
+                <span class="side-tag">Django</span>
+                <span class="side-tag">Spring Boot</span>
+              </div>
+            </div>
+            <div class="skill-cluster">
+              <span class="skill-label">AI &amp; Data</span>
+              <div class="tag-list">
+                <span class="side-tag">LLM / RAG</span>
+                <span class="side-tag">LangChain</span>
+                <span class="side-tag">Vector Search</span>
+                <span class="side-tag">MongoDB</span>
+                <span class="side-tag">MySQL</span>
+              </div>
+            </div>
+            <div class="skill-cluster">
+              <span class="skill-label">Workflow</span>
+              <div class="tag-list">
+                <span class="side-tag">Git</span>
+                <span class="side-tag">Docker</span>
+                <span class="side-tag">Postman</span>
+                <span class="side-tag">Figma</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Languages</h2>
+            <div class="language-row">
+              <span class="language-name">Vietnamese</span>
+              <span class="language-level">Native</span>
+            </div>
+            <div class="language-row">
+              <span class="language-name">English</span>
+              <span class="language-level">B1+ · Technical</span>
+            </div>
+          </section>
+
+        </aside>
+
+        <div class="main">
+          <header class="hero">
+            <p class="eyebrow">Full-Stack Development · Applied AI</p>
+            <p class="name-heading" aria-hidden="true">Nguyen <span>Minh Duc</span></p>
+            <p class="hero-role"><strong>Full-Stack &amp; Applied AI Developer</strong></p>
+            <span class="availability">Seeking internship opportunities</span>
+          </header>
+
+          <section class="profile" aria-labelledby="profile-heading">
+            <div class="section-heading">
+              <span class="index">01</span>
+              <h2 id="profile-heading">Professional Profile</h2>
+              <span class="rule"></span>
+            </div>
+            <p>
+              Information Technology student at <strong>Hanoi University</strong> focused on
+              full-stack and AI product engineering. I build complete flows—from responsive
+              interfaces and APIs to data models and retrieval-augmented generation. My
+              strongest work is a solo-developed academic workspace that combines semantic
+              search, document Q&amp;A, summarization, and adaptive study tools in one product.
+            </p>
+          </section>
+
+          <section class="content-section" aria-labelledby="experience-heading">
+            <div class="section-heading">
+              <span class="index">02</span>
+              <h2 id="experience-heading">Experience</h2>
+              <span class="rule"></span>
+            </div>
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="item-topline">
+                  <h3>Independent Full-Stack &amp; AI Developer</h3>
+                  <span class="date">2024 — PRESENT</span>
+                </div>
+                <p class="item-subtitle">Personal Product Development · Hanoi</p>
+                <ul class="bullet-list">
+                  <li>Own end-to-end delivery of web prototypes and AI-assisted tools, from interface architecture to API and data integration.</li>
+                  <li>Built working flows for document ingestion, semantic discovery, question answering, summarization, and quiz generation.</li>
+                  <li>Iterate through hands-on testing, issue diagnosis, responsive refinement, and repository-based version control.</li>
+                </ul>
+              </article>
+
+              <article class="timeline-item">
+                <div class="item-topline">
+                  <h3>System Analyst &amp; Designer</h3>
+                  <span class="date">2026</span>
+                </div>
+                <p class="item-subtitle">Academic Project · Hanoi University</p>
+                <ul class="bullet-list">
+                  <li>Owned the UC12 Catering Fleet &amp; Logistics Dispatch workstream for a premium buffet and catering information system.</li>
+                  <li>Produced linked business, requirement, analysis, and design deliverables with process rules, interaction models, and UI evidence.</li>
+                  <li>Maintained traceability from stakeholder needs through use-case behavior to platform-neutral design decisions.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-section" aria-labelledby="capabilities-heading">
+            <div class="section-heading">
+              <span class="index">03</span>
+              <h2 id="capabilities-heading">Engineering Capabilities</h2>
+              <span class="rule"></span>
+            </div>
+            <div class="arsenal-grid">
+              <article class="arsenal-card">
+                <h3>Product Engineering</h3>
+                <p>Responsive UI, component design, REST APIs, validation, authentication flows, and data-backed features.</p>
+              </article>
+              <article class="arsenal-card">
+                <h3>Applied AI</h3>
+                <p>Prompt design, embeddings, retrieval pipelines, vector search, context assembly, and LLM-powered study tools.</p>
+              </article>
+              <article class="arsenal-card">
+                <h3>System Design</h3>
+                <p>Requirements, use cases, business rules, UML models, interface prototypes, and design traceability.</p>
+              </article>
+              <article class="arsenal-card">
+                <h3>Development Workflow</h3>
+                <p>Version control, API testing, containerized environments, iterative debugging, and technical documentation.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+      <span class="page-number">SAD_IT_2301040048 · 01 / 02</span>
+    </article>
+
+    <article class="page page-two" aria-label="CV page 2 of 2">
+      <div class="page-grid">
+        <aside class="sidebar" aria-label="Portfolio and contact details">
+          <img class="crest" src="chan_dung.png" alt="Nguyen Minh Duc Portrait">
+          <div class="identity-mini">
+            <span class="level">Portfolio Highlights</span>
+            <p>Projects · Achievements · Education</p>
+          </div>
+
+          <section class="side-section">
+            <h2 class="side-title">Current Focus</h2>
+            <div class="tag-list">
+              <span class="side-tag">AI Products</span>
+              <span class="side-tag">RAG Systems</span>
+              <span class="side-tag">Full-Stack Web</span>
+              <span class="side-tag">System Analysis</span>
+              <span class="side-tag">Product UX</span>
+            </div>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Find My Work</h2>
+            <ul class="contact-list">
+              <li>
+                <a href="https://github.com/nguyenduc07062005" target="_blank" rel="noreferrer">
+                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-6 0C5.8.1 4.7.5 4.7.5A5 5 0 0 0 4.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 9 18v4"/><path d="M9 19c-3 .9-3-1.5-4.2-2"/></svg>
+                  <span>nguyenduc07062005</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:nguyenduc07062005@gmail.com">
+                  <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
+                  <span>nguyenduc07062005@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </aside>
+
+        <div class="main">
+          <header class="chapter-mark">
+            <h2>Selected Projects</h2>
+            <p>Three builds that show product ownership, interface thinking, applied AI, and structured system analysis.</p>
+          </header>
+
+          <section class="content-section" aria-label="Selected project portfolio">
+            <div class="project-list">
+              <article class="project-card featured">
+                <div class="project-head">
+                  <div>
+                    <span class="project-type">AI Academic Workspace · 2025–2026</span>
+                    <h3>SKS — Smart Knowledge System</h3>
+                  </div>
+                  <a class="project-link" href="https://github.com/nguyenduc07062005/ss2_s2026_sks" target="_blank" rel="noreferrer">
+                    Repository
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M10 14 21 3M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"/></svg>
+                  </a>
+                </div>
+                <p>
+                  A unified study platform where learners upload course documents, retrieve
+                  information by meaning, ask grounded questions, generate summaries and
+                  quizzes, and follow personalized study paths. Developed independently from
+                  interface to AI retrieval flow.
+                </p>
+                <ul class="project-points">
+                  <li>Semantic document search</li>
+                  <li>Grounded document Q&amp;A</li>
+                  <li>AI summary generation</li>
+                  <li>Quiz generation workflow</li>
+                  <li>Related-content discovery</li>
+                  <li>Personalized study navigation</li>
+                </ul>
+                <div class="tech-row">
+                  <span class="tech">React</span>
+                  <span class="tech">Node.js</span>
+                  <span class="tech">Python</span>
+                  <span class="tech">LangChain</span>
+                  <span class="tech">RAG</span>
+                  <span class="tech">MongoDB</span>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-head">
+                  <div>
+                    <span class="project-type">Interactive Web Prototype · 2026</span>
+                    <h3>EduManage HANU — Academic Portal</h3>
+                  </div>
+                </div>
+                <p>
+                  Responsive student information portal prototype covering sign-in, dashboard,
+                  course registration, grades, weekly timetable, announcements, and support.
+                  Dynamic registration logic updates selected credits and surfaces schedule conflicts.
+                </p>
+                <div class="tech-row">
+                  <span class="tech">HTML</span>
+                  <span class="tech">CSS</span>
+                  <span class="tech">JavaScript</span>
+                  <span class="tech">Responsive UI</span>
+                  <span class="tech">Interaction Design</span>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-head">
+                  <div>
+                    <span class="project-type">System Analysis &amp; Design · 2026</span>
+                    <h3>Premium Buffet &amp; Catering System</h3>
+                  </div>
+                </div>
+                <p>
+                  End-to-end SAD workstream for Catering Fleet &amp; Logistics Dispatch.
+                  Delivered business modeling, requirement specification, analysis realization,
+                  and platform-neutral design with linked process, interaction, and interface artifacts.
+                </p>
+                <div class="tech-row">
+                  <span class="tech">RUP</span>
+                  <span class="tech">UML</span>
+                  <span class="tech">Use Cases</span>
+                  <span class="tech">Requirements</span>
+                  <span class="tech">UI Prototyping</span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="content-section two-column-section">
+            <div aria-labelledby="milestones-heading">
+              <div class="section-heading">
+                <span class="index">02</span>
+                <h2 id="milestones-heading">Achievements</h2>
+                <span class="rule"></span>
+              </div>
+              <div class="milestone-list">
+                <article class="milestone">
+                  <span class="milestone-number">01</span>
+                  <div>
+                    <h3>End-to-end ownership</h3>
+                    <p>Delivered a connected AI product spanning user interface, APIs, retrieval pipelines, and data.</p>
+                  </div>
+                </article>
+                <article class="milestone">
+                  <span class="milestone-number">02</span>
+                  <div>
+                    <h3>Self-directed AI specialization</h3>
+                    <p>Applied embeddings, retrieval, prompt design, and LLM integration beyond the core curriculum.</p>
+                  </div>
+                </article>
+                <article class="milestone">
+                  <span class="milestone-number">03</span>
+                  <div>
+                    <h3>Cross-discipline delivery</h3>
+                    <p>Combined software construction with formal requirements and system-design documentation.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div aria-labelledby="education-heading">
+              <div class="section-heading">
+                <span class="index">03</span>
+                <h2 id="education-heading">Education</h2>
+                <span class="rule"></span>
+              </div>
+              <article class="education-card">
+                <span class="date">2023 — 2027</span>
+                <h3>Bachelor of Information Technology</h3>
+                <p>Hanoi University (HANU)<br>Hanoi, Vietnam</p>
+                <span class="gpa">GPA 2.8 / 4.0</span>
+              </article>
+              <article class="education-card">
+                <span class="date">2020 — 2023</span>
+                <h3>Upper Secondary Education</h3>
+                <p>Natural Sciences focus</p>
+              </article>
+            </div>
+          </section>
+
+          <footer class="closing-banner">
+            <div>
+              <strong>Career objective: contribute, learn, and deliver.</strong>
+              <p>Open to internship opportunities in full-stack, applied AI, and software engineering.</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <span class="page-number">SAD_IT_2301040048 · 02 / 02</span>
+    </article>
+  </main>
+</body>
+</html>
