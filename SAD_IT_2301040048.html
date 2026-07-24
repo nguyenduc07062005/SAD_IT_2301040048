@@ -94,55 +94,6 @@
       outline-offset: 3px;
     }
 
-    .viewer-bar {
-      position: fixed;
-      right: 22px;
-      bottom: 20px;
-      z-index: 20;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      animation: viewer-in 0.55s ease both;
-    }
-
-    .viewer-note {
-      display: none;
-      color: rgba(21, 61, 86, 0.72);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .print-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 38px;
-      padding: 0 16px;
-      border: 1px solid rgba(21, 61, 86, 0.22);
-      border-radius: 999px;
-      color: var(--white);
-      font: 700 11px var(--sans);
-      background: linear-gradient(135deg, var(--navy-3), var(--navy));
-      box-shadow: 0 10px 26px rgba(25, 72, 92, 0.2);
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .print-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(25, 72, 92, 0.28);
-    }
-
-    .print-button svg {
-      width: 15px;
-      height: 15px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-    }
-
     .resume-stack {
       position: relative;
       z-index: 1;
@@ -1533,29 +1484,9 @@
       }
     }
 
-    @keyframes viewer-in {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @media (max-width: 860px) {
       body {
-        padding: 76px 10px 40px;
-      }
-
-      .viewer-bar {
-        right: 14px;
-        bottom: 14px;
-      }
-
-      .viewer-note {
-        display: none;
+        padding: 24px 10px 40px;
       }
 
       .resume-stack {
@@ -1580,8 +1511,7 @@
         background: var(--white);
       }
 
-      body::before,
-      .viewer-bar {
+      body::before {
         display: none !important;
       }
 
@@ -1622,16 +1552,6 @@
 
 <body>
   <h1 class="sr-only">Nguyen Minh Duc — Curriculum Vitae</h1>
-
-  <div class="viewer-bar" aria-label="Document controls">
-    <span class="viewer-note">Curriculum Vitae · 2 pages</span>
-    <button class="print-button" id="printButton" type="button" onclick="window.print()">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/>
-      </svg>
-      Save as PDF
-    </button>
-  </div>
 
   <main class="resume-stack" aria-label="Curriculum vitae of Nguyen Minh Duc">
     <article class="page page-one" aria-label="CV page 1 of 2">
@@ -1732,9 +1652,9 @@
 
         <div class="main">
           <header class="hero">
-            <p class="eyebrow">Full-Stack Development · Applied AI</p>
+            <p class="eyebrow">Full-Stack Development · AI &amp; RAG Projects</p>
             <p class="name-heading" aria-hidden="true">Nguyen <span>Minh Duc</span></p>
-            <p class="hero-role"><strong>Full-Stack &amp; Applied AI Developer</strong></p>
+            <p class="hero-role"><strong>Full-Stack Developer</strong></p>
             <span class="availability">Seeking internship opportunities</span>
           </header>
 
